@@ -24,8 +24,7 @@ else:
     print("no")
 
 # List length
-length = len(myList)
-print(length)
+print(len(myList))
 
 # Append element in a list
 myList.append("lemon")
@@ -44,7 +43,7 @@ print(myList)
 
 # Remove a specific element
 myList.remove("cherry")  # .remove returns None
-print(f"Item removed: cherry")
+print("Item removed: cherry")
 print(myList)
 
 # Clear list
