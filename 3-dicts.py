@@ -1,36 +1,36 @@
 # Dictionary: Key-value pairs, unordered, mutable
-myDict = {"name": "Max", "age": 28, "city": "New York"}
-print(myDict)
+my_dict = {"name": "Max", "age": 28, "city": "New York"}
+print(my_dict)
 
 # ------------ Built-in 'dict' constructor ------------
-myDict2 = dict(name="Mary", age=27, city="Boston")
-print(myDict2)
+my_dict2 = dict(name="Mary", age=27, city="Boston")
+print(my_dict2)
 
 # ------------ Access the value of a key ------------
-value = myDict["name"]  # key: "name" --> value: "Max"
+value = my_dict["name"]  # key: "name" --> value: "Max"
 print(value)
 
 # ------------ Add a key-value pair ------------
-myDict["email"] = "max@xyz.com"
-print(myDict)
+my_dict["email"] = "max@xyz.com"
+print(my_dict)
 
 # ------------ Change the value of a key ------------
-myDict["email"] = "coolmax@xyz.com"
-print(myDict)
+my_dict["email"] = "coolmax@xyz.com"
+print(my_dict)
 
 # ------------ Delete a key-value pair ------------
-del myDict["email"]
-print(myDict)
+del my_dict["email"]
+print(my_dict)
 # --> Alternatives <--
 # myDict.pop("email")
 
 # ------------ Delete last inserted key-value pair ------------
 # myDict.popitem()
-print(myDict)
+print(my_dict)
 
 # ------------ Check item's existence in dictionary ------------
-if "name" in myDict:
-    print(myDict["name"])
+if "name" in my_dict:
+    print(my_dict["name"])
 
 # try:
 #     print(myDict["lastname"])
@@ -47,37 +47,37 @@ if "name" in myDict:
 # for value in myDict.values():
 #     print(value)
 
-for key, value in myDict.items():
+for key, value in my_dict.items():
     print(f"{key} --> {value}")
 
 # ------------ Copy a dictionary ------------
-myDict_cpy = myDict  # Shallow copy
-myDict_cpy = myDict.copy()  # Deep copy
-myDict_cpy = dict(myDict)  # Deep copy
-print(myDict)
-print(myDict_cpy)
+my_dict_cpy = my_dict  # Shallow copy
+my_dict_cpy = my_dict.copy()  # Deep copy
+my_dict_cpy = dict(my_dict)  # Deep copy
+print(my_dict)
+print(my_dict_cpy)
 
-myDict_cpy["email"] = "max@xyz.com"
-print(myDict)
-print(myDict_cpy)
+my_dict_cpy["email"] = "max@xyz.com"
+print(my_dict)
+print(my_dict_cpy)
 
 # ------------ Merge dictionaries ------------
-myDict = {"name": "Max", "age": 28, "email": "max@xyz.com"}
-myDict2 = dict(name="Mary", age=27, city="Boston")
+my_dict = {"name": "Max", "age": 28, "email": "max@xyz.com"}
+my_dict2 = dict(name="Mary", age=27, city="Boston")
 
-myDict.update(myDict2)
-print(myDict)
+my_dict.update(my_dict2)
+print(my_dict)
 
 # ------------ Integer keys ------------
-myDict = {3: 9, 6: 36, 9: 81}
-print(myDict)
+my_dict = {3: 9, 6: 36, 9: 81}
+print(my_dict)
 
-value = myDict[3]
+value = my_dict[3]
 print(value)
 
 # ------------ Tuple keys ------------
-myTuple = (8, 7)
-myDict = {myTuple: 15}
-print(myDict)
+my_tuple = (8, 7)
+my_dict = {my_tuple: 15}
+print(my_dict)
 
 # Lists cannot be keys because they are not hashable, as they are mutable

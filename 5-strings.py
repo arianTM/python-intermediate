@@ -1,43 +1,43 @@
 # Strings: ordered, inmutable, text representation
 from timeit import default_timer as timer
-myString = "Hello world!"
-print(myString)
-myString = 'Hello world 2!'
-print(myString)
+my_string = "Hello world!"
+print(my_string)
+my_string = 'Hello world 2!'
+print(my_string)
 
 # ------------ Escape character \ ------------
-myString = 'I\'m a programmer'
-print(myString)
+my_string = 'I\'m a programmer'
+print(my_string)
 
 # ------------ Multiline string ------------
-myString = """Hello world! 3
+my_string = """Hello world! 3
 Hello world! 3"""
-print(myString)
+print(my_string)
 
 # ------------ Accessing elements in a string ------------
-myString = "Hello world!"
-char = myString[0]  # First character
-char = myString[1]  # Second character
-char = myString[-1]  # Last character
+my_string = "Hello world!"
+char = my_string[0]  # First character
+char = my_string[1]  # Second character
+char = my_string[-1]  # Last character
 print(char)
 
 # ------------ Changing elements in a string ------------
 # myString[0] = "h" # TypeError
 
 # ------------ Substring ------------
-myString = "Hello World"
-print(myString)
-substring = myString[1:5]  # Slice from indeces 1 to 5, excluding 5
+my_string = "Hello World"
+print(my_string)
+substring = my_string[1:5]  # Slice from indeces 1 to 5, excluding 5
 print(substring)
-substring = myString[:5]  # Slice from indeces 0 to 5, excluding 5
+substring = my_string[:5]  # Slice from indeces 0 to 5, excluding 5
 print(substring)
-substring = myString[1:]  # Slice from indeces 1 to last
+substring = my_string[1:]  # Slice from indeces 1 to last
 print(substring)
-substring = myString[:]  # Returns a copy of the string
+substring = my_string[:]  # Returns a copy of the string
 print(substring)
-substring = myString[::2]  # Slice from indeces 0 to last, in step of 2
+substring = my_string[::2]  # Slice from indeces 0 to last, in step of 2
 print(substring)
-substring = myString[::-1]  # Slice from indeces last to 0
+substring = my_string[::-1]  # Slice from indeces last to 0
 print(substring)
 
 # ------------ Concatenate strings (+) ------------
@@ -57,37 +57,37 @@ else:
     print("no")
 
 # ------------ Remove trailing white spaces in a string ------------
-myString = "      This sentence has spaces between      "
-print(myString)
-myString = myString.strip()
-print(myString)
+my_string = "      This sentence has spaces between      "
+print(my_string)
+my_string = my_string.strip()
+print(my_string)
 
 # ------------ Convert to upper/lower case ------------
-myString = "Hello World!"
-print(myString.upper())
-print(myString.lower())
+my_string = "Hello World!"
+print(my_string.upper())
+print(my_string.lower())
 
 # ------------ Check if string starts/ends with another string ------------
-print(myString.startswith("Hello"))
-print(myString.endswith("World!"))
+print(my_string.startswith("Hello"))
+print(my_string.endswith("World!"))
 
 # ------------ Find index of substring ------------
-print(myString.find("orl"))
+print(my_string.find("orl"))
 
 # ------------ Count how many substrings are ------------
-print(myString.count("l"))
+print(my_string.count("l"))
 
 # ------------ Replace a substring with another ------------
-print(myString.replace("World", "Universe"))
+print(my_string.replace("World", "Universe"))
 
 # ------------ Split a string ------------
-myString = "how are you doing?"
-myList = myString.split()  # Splits between spaces (" ") as default
-print(myList)
+my_string = "how are you doing?"
+my_list = my_string.split()  # Splits between spaces (" ") as default
+print(my_list)
 
 # ------------ Join a list ------------
 
-myList = ['a'] * 1000000
+my_list = ['a'] * 1000000
 
 # bad
 # start = timer()
@@ -99,36 +99,36 @@ myList = ['a'] * 1000000
 
 # good
 start = timer()
-myNewString = " ".join(myList)
+my_new_string = " ".join(my_list)
 stop = timer()
 print(stop - start)
 
 # ------------ Format strings ------------
 # oldest
 var = "Tom"
-myString = "the variable is %s" % var
-print(myString)
+my_string = "the variable is %s" % var
+print(my_string)
 
 var = 14
-myString = "the OLDEST variable is %d" % var
-print(myString)
+my_string = "the OLDEST variable is %d" % var
+print(my_string)
 
 var = 3.1416
-myString = "the OLDEST variable is %.2f" % var
-print(myString)
+my_string = "the OLDEST variable is %.2f" % var
+print(my_string)
 
 # old
 var = "Tom"
-myString = "the OLD variable is {}".format(var)
-print(myString)
+my_string = "the OLD variable is {}".format(var)
+print(my_string)
 
 var = 2.7818
 var2 = 6
-myString = "the OLD variable is {:.2f} and {}".format(var, var2)
-print(myString)
+my_string = "the OLD variable is {:.2f} and {}".format(var, var2)
+print(my_string)
 
 # newest (since Python 3.6)
 
 # Allows expressions
-myString = f"the NEWEST variable is {var:.2f} and {var2 * 3}"
-print(myString)
+my_string = f"the NEWEST variable is {var:.2f} and {var2 * 3}"
+print(my_string)

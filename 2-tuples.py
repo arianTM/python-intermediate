@@ -1,57 +1,57 @@
 # Tuples: ordered, inmutable, allows duplicate elements
 import sys
 import timeit
-myTuple = ("Max", 28, "Boston")
-myTuple = "Max", 28, "Boston"  # Parenthesis are optional
-print(myTuple)
+my_tuple = ("Max", 28, "Boston")
+my_tuple = "Max", 28, "Boston"  # Parenthesis are optional
+print(my_tuple)
 
 # ---- Handle one element in tuples ----
-myTuple = ("Max")  # Non tuple
-print(type(myTuple))
-myTuple = ("Max",)  # Tuple
-print(type(myTuple))
+my_tuple = ("Max")  # Non tuple
+print(type(my_tuple))
+my_tuple = ("Max",)  # Tuple
+print(type(my_tuple))
 
 # ---- Built-in 'tuple' constructor ----
-myTuple = tuple(["Max", 28, "Boston"])
-print(myTuple)
+my_tuple = tuple(["Max", 28, "Boston"])
+print(my_tuple)
 
 # ---- Accessing elements ----
-item = myTuple[0]  # First item
-item = myTuple[1]  # Second item
-item = myTuple[2]  # Third item
+item = my_tuple[0]  # First item
+item = my_tuple[1]  # Second item
+item = my_tuple[2]  # Third item
 # item = myTuple[3]  # IndexError
-item = myTuple[-1]  # Last item
+item = my_tuple[-1]  # Last item
 print(item)
 
 # ---- Changing elements ----
 # myTuple[0] = "Tim"  # TypeError
 
 # ---- Iterate over a tuple ----
-for i in myTuple:
+for i in my_tuple:
     print(f"{i} --> Keep iterating")
 
-if "Max" in myTuple:
+if "Max" in my_tuple:
     print("Max is in tuple")
 else:
     print("Max is not in tuple")
 
 # ---- Length of a tuple ----
-myTuple = ('a', 'p', 'p', 'l', 'e')
-print(len(myTuple))
+my_tuple = ('a', 'p', 'p', 'l', 'e')
+print(len(my_tuple))
 
 # ---- Count item in a tuple ----
-print(myTuple.count("p"))
+print(my_tuple.count("p"))
 
 # ---- Index of item in a tuple ----
-print(myTuple.index("l"))
+print(my_tuple.index("l"))
 
 # ---- Cast a tuple into a list ----
-myList = list(myTuple)
-print(myList)
+my_list = list(my_tuple)
+print(my_list)
 
 # ---- Cast a list into a tuple ----
-myTuple2 = tuple(myList)
-print(myTuple2)
+my_tuple2 = tuple(my_list)
+print(my_tuple2)
 
 # ---- Slicing ----
 a = tuple(range(1, 11))
@@ -67,25 +67,25 @@ b = a[::-1]  # Slices from last index to index 0
 print(b)
 
 # ---- Unpacking ----
-myTuple = "Max", 28, "Boston"
+my_tuple = "Max", 28, "Boston"
 # Unpacking (number of variables should equal tuple length)
-name, age, city = myTuple
+name, age, city = my_tuple
 print(name)
 print(age)
 print(city)
 
-myTuple = tuple(range(5))
-i1, *i2, i3 = myTuple
+my_tuple = tuple(range(5))
+i1, *i2, i3 = my_tuple
 print(i1)
 print(i2)
 print(i3)
 
 # -----------------------------------
 # Tuples are more efficient that lists, but cannot changes its elements
-myList = [0, 1, 2, "hello", True]
-myTuple = (0, 1, 2, "hello", True)
-print(sys.getsizeof(myList, "bytes"))
-print(sys.getsizeof(myTuple, "bytes"))
+my_list = [0, 1, 2, "hello", True]
+my_tuple = (0, 1, 2, "hello", True)
+print(sys.getsizeof(my_list, "bytes"))
+print(sys.getsizeof(my_tuple, "bytes"))
 
 print(timeit.timeit(stmt="[0, 1, 2, 3, 4, 5]", number=1000000))
 print(timeit.timeit(stmt="(0, 1, 2, 3, 4, 5)", number=1000000))

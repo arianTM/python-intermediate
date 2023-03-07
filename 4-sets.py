@@ -1,46 +1,46 @@
 # Sets: unordered, mutable, no duplicates
-mySet = {1, 2, 3, 1, 2}
-print(mySet)
+my_set = {1, 2, 3, 1, 2}
+print(my_set)
 
 # ------------ Built-in 'set' constructor ------------
-mySet = set("Hello")
-print(mySet)
+my_set = set("Hello")
+print(my_set)
 
 # ------------ Empty set ------------
-mySet = set()  # mySet = {} creates a dict
-print(type(mySet))
+my_set = set()  # mySet = {} creates a dict
+print(type(my_set))
 
 # ------------ Add items ------------
-print(mySet)  # Empty set
-mySet.add(1)
-mySet.add(2)
-mySet.add(3)
-print(mySet)
+print(my_set)  # Empty set
+my_set.add(1)
+my_set.add(2)
+my_set.add(3)
+print(my_set)
 
 # ------------ Remove items ------------
 
-mySet.remove(3)
+my_set.remove(3)
 # mySet.remove(4) # KeyError
 
-print(mySet)
+print(my_set)
 
-mySet.discard(4)  # Same as remove but no error
+my_set.discard(4)  # Same as remove but no error
 
-print(mySet.pop())
+print(my_set.pop())
 
-print(mySet)
+print(my_set)
 
 # ------------ Clear set ------------
-mySet.clear()
-print(mySet)
+my_set.clear()
+print(my_set)
 
 # ------------ Iterate through a set ------------
-mySet = {1, 2, 3, 4, 5}
-for i in mySet:
+my_set = {1, 2, 3, 4, 5}
+for i in my_set:
     print(i)
 
 # ------------ Check item's existence in a set ------------
-if 1 in mySet:
+if 1 in my_set:
     print("1 in set")
 else:
     print("1 not in set")

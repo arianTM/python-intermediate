@@ -1,50 +1,50 @@
 # Lists: ordered, mutable, allows duplicate elements
-myList = ["banana", "cherry", "apple"]
-print(myList)
+my_list = ["banana", "cherry", "apple"]
+print(my_list)
 
 # Allows more than one data type
 # myList2 = list()
-myList2 = [5, True, "apple"]
-print(myList2)
+my_list2 = [5, True, "apple"]
+print(my_list2)
 
 # Access with index
-item = myList[0]  # First element
-item = myList[1]  # Second element
-item = myList[2]  # Third element
-item = myList[-1]  # Last element
+item = my_list[0]  # First element
+item = my_list[1]  # Second element
+item = my_list[2]  # Third element
+item = my_list[-1]  # Last element
 
 # Iterate over a list
-for i in myList:
+for i in my_list:
     print(i)
 
 # Check item's existence in a list
-if "banana" in myList:
+if "banana" in my_list:
     print("yes")
 else:
     print("no")
 
 # List length
-print(len(myList))
+print(len(my_list))
 
 # Append element in a list
-myList.append("lemon")
-print(myList)
+my_list.append("lemon")
+print(my_list)
 
 # Insert element in a list at a specific index
-myList.insert(1, "blueberry")  # At index 1, insert "blueberry"
-print(myList)
+my_list.insert(1, "blueberry")  # At index 1, insert "blueberry"
+print(my_list)
 
 # Remove last element and return it in a list
-item = myList.pop()
+item = my_list.pop()
 print(f"Last item removed: {item}")
-print(myList)
+print(my_list)
 
 # Popping an empty list will give an IndexError
 
 # Remove a specific element
-myList.remove("cherry")  # .remove returns None
+my_list.remove("cherry")  # .remove returns None
 print("Item removed: cherry")
-print(myList)
+print(my_list)
 
 # Clear list
 example = [1, True, "asd"]
@@ -52,23 +52,23 @@ example.clear()
 print(example)
 
 # Reverse list
-numList = [5, 3, 7]
-print(numList)
-numList.reverse()
-print(numList)
+num_list = [5, 3, 7]
+print(num_list)
+num_list.reverse()
+print(num_list)
 
 # Sort list
-numList.sort()
-print(numList)
+num_list.sort()
+print(num_list)
 
 # Return a copy of sorted list (without changing the original list)
-ordered = sorted(myList)
-print(myList)
+ordered = sorted(my_list)
+print(my_list)
 print(ordered)
 
 # Multiply a list
-fiveZeros = [0] * 5
-print(fiveZeros)
+five_zeros = [0] * 5
+print(five_zeros)
 
 # Concatenate two or more lists
 list1 = [1, 2, 3]
@@ -78,18 +78,18 @@ new_list = list1 + list2 + list3
 print(new_list)
 
 # ---------- Slicing ----------
-myList = list(range(1, 10))
-sliced = myList[1:3]  # Includes index 1, excludes index 3
+my_list = list(range(1, 10))
+sliced = my_list[1:3]  # Includes index 1, excludes index 3
 print(sliced)
-sliced = myList[:3]  # From index 0 to index 3, excluding 3
+sliced = my_list[:3]  # From index 0 to index 3, excluding 3
 print(sliced)
-sliced = myList[1:]  # From index 1 to last index
+sliced = my_list[1:]  # From index 1 to last index
 print(sliced)
 # From index 1 to index 7, excluding index 7, with step 2
-sliced = myList[1:7:2]
+sliced = my_list[1:7:2]
 print(sliced)
 # From index 7 to index 1, excluding index 7, with step 2
-sliced = myList[1:7:-2]
+sliced = my_list[1:7:-2]
 
 # ------------ Copying lists ------------
 list_org = ["banana", "cherry", "apple"]
@@ -109,9 +109,9 @@ print(list_cpy)
 
 # ------------ Generate lists in base of other lists ------------
 
-myList = list(range(1, 7))
-myList2 = [i**2 for i in myList]
-print(myList)
-print(myList2)
+my_list = list(range(1, 7))
+my_list2 = [i**2 for i in my_list]
+print(my_list)
+print(my_list2)
 
 # ---------------------------------------------------------------
