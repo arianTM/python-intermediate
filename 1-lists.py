@@ -78,7 +78,7 @@ list3 = [7, 8, 9]
 new_list = list1 + list2 + list3
 print(new_list)
 
-# ---- Slicing ----
+# ---------- Slicing ----------
 myList = list(range(1, 10))
 sliced = myList[1:3]  # Includes index 1, excludes index 3
 print(sliced)
@@ -91,3 +91,28 @@ sliced = myList[1:7:2]
 print(sliced)
 # From index 7 to index 1, excluding index 7, with step 2
 sliced = myList[1:7:-2]
+
+# ------------ Copying lists ------------
+list_org = ["banana", "cherry", "apple"]
+list_cpy = list_org  # Shallow copy
+list_cpy.append("lemon")
+print(list_org)
+print(list_cpy)
+
+list_cpy = list_org.copy()  # Deep copy
+# ------ Alternatives ------
+list_cpy = list(list_org)
+list_cpy = list_org[:]
+# -------------------------
+list_cpy.append("strawberry")
+print(list_org)
+print(list_cpy)
+
+# ------------ Generate lists in base of other lists ------------
+
+myList = list(range(1, 7))
+myList2 = [i**2 for i in myList]
+print(myList)
+print(myList2)
+
+# ---------------------------------------------------------------
